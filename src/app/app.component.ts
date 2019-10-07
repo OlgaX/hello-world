@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hello-world';
+  title = 'hello-world (test deploy with tag 0.0.0)';
 }
