@@ -6,14 +6,11 @@ before_install:
 - npm install -g @angular/cli
 install: npm install
 
-branches:
-  only:
-  - master
-
 deploy:
   provider: heroku
   api_key:
     secure: "be4c2030-b1ad-4140-b2d6-b63d4296126f"
   app: app-olgax
   on:
+    branche: master
     tags: true
