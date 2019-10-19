@@ -27,7 +27,7 @@ export class ScheduleService {
         params = '?' + Object.keys(queryParams).map(key => key + '=' + queryParams[key]).join('&');
       }
 
-      this._schedule$ = this._http.get<IScheduleResponse[]>(`http://api.tvmaze.com/schedule${params}`).pipe(
+      this._schedule$ = this._http.get<IScheduleResponse[]>(`//api.tvmaze.com/schedule${params}`).pipe(
         publishReplay(1),
         refCount(),
       );
@@ -42,7 +42,7 @@ export class ScheduleService {
     }
 
     if (!this._fullSchedule$) {
-      this._fullSchedule$ = this._http.get<IScheduleFullResponse[]>('http://api.tvmaze.com/schedule/full').pipe(
+      this._fullSchedule$ = this._http.get<IScheduleFullResponse[]>('//api.tvmaze.com/schedule/full').pipe(
         publishReplay(1),
         refCount(),
       );

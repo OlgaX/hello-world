@@ -12,6 +12,6 @@ export class EpisodeService {
   constructor(private _http: HttpClient) { }
 
   public getEpisodeById(id: number): Observable<IShowEpisodesResponse> {
-    return this._http.get<IShowEpisodesResponse>(`http://api.tvmaze.com/episodes/${id}`);
+    return this._http.get<IShowEpisodesResponse>(`//api.tvmaze.com/episodes/${id}`);
   }
 }

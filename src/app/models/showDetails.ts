@@ -6,7 +6,7 @@ export class ShowDetails {
   public title: string;
   public description: string;
   public url: string;
-  public img = 'https://via.placeholder.com/210x295.png';
+  public img = '//via.placeholder.com/210x295.png';
   public genres: string[];
   public rating: number;
 

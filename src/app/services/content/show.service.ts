@@ -12,10 +12,10 @@ export class ShowService {
   constructor(private _http: HttpClient) { }
 
   public getShowById(id: number): Observable<IShowDetailsAPI> {
-    return this._http.get<IShowDetailsAPI>(`http://api.tvmaze.com/shows/${id}`);
+    return this._http.get<IShowDetailsAPI>(`//api.tvmaze.com/shows/${id}`);
   }
 
   public getShowEpisodes(id: number): Observable<IShowEpisodesResponse[]> {
-    return this._http.get<IShowEpisodesResponse[]>(`http://api.tvmaze.com/shows/${id}/episodes`);
+    return this._http.get<IShowEpisodesResponse[]>(`//api.tvmaze.com/shows/${id}/episodes`);
   }
 }

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/OlgaX/tvland.svg?branch=master)](https://travis-ci.com/OlgaX/tvland)
+[![Build Status](https://travis-ci.com/OlgaX/hello-world.svg?branch=master)](https://travis-ci.com/OlgaX/hello-world)
 
 # TVLand
 
