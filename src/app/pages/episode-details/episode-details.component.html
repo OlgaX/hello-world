@@ -1,0 +1,34 @@
+<app-popup *ngIf="isEpisodeVisible"
+           (onClose)="isEpisodeVisible = false">
+
+  <ng-container popup-title>Episode {{data.episodeNumber}}: {{data.title}}</ng-container>
+
+  <div popup-body
+       class="row">
+
+    <div *ngIf="data.img"
+         class="col-sm-auto my-2 text-center">
+      <img [src]="data.img"
+           alt=""
+           class="img-fluid">
+    </div>
+
+    <div class="col-sm my-2">
+      {{data.description || 'sorry, no description :('}}
+    </div>
+
+  </div>
+
+
+  <ng-container popup-footer>
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="isEpisodeVisible = false">Close</button>
+
+    <a [href]="data.url"
+       target="_blank"
+       class="btn btn-primary">Watch</a>
+
+  </ng-container>
+
+</app-popup>

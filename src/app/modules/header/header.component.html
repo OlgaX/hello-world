@@ -1,0 +1,70 @@
+<header>
+
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+
+    <div class="container">
+
+      <!-- LOGO -->
+      <a routerLink="/"
+         class="navbar-brand d-flex">
+        <i class="material-icons mr-1"
+           style="font-size: 1.65rem">live_tv</i>
+        <span>TVLand</span>
+      </a>
+
+      <!-- MOBILE NAVIGATION BUTTON -->
+      <button class="navbar-toggler border-0"
+              type="button"
+              data-toggle="collapse"
+              data-target="#nav">
+
+        <i class="material-icons">more_vert</i>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+
+        <!-- NAVIGATION -->
+        <ul class="navbar-nav mr-auto">
+          <li *ngFor="let i of navigation"
+              routerLinkActive="active"
+              class="nav-item">
+            <a [routerLink]="i.url"
+               class="nav-link">{{i.title}}</a>
+          </li>
+        </ul>
+
+
+        <div class="d-flex align-items-center flex-wrap">
+          <!-- SEARCH FORM -->
+          <form class="d-flex my-2 my-lg-0">
+            <input class="form-control mr-2"
+                   type="search"
+                   placeholder="Search">
+            <button class="btn btn-outline-secondary"
+                    type="button">Search</button>
+          </form>
+
+          <div class="ml-auto">
+            <button (click)="auth.login()"
+                    class="btn btn-primary ml-4"
+                    *ngIf="!auth.loggedIn">Log In</button>
+
+            <button (click)="auth.logout()"
+                    class="btn btn-outline-primary ml-4"
+                    *ngIf="auth.loggedIn">Log Out</button>
+
+            <a [routerLink]="['profile']"
+               class="btn btn-primary ml-2"
+               *ngIf="auth.loggedIn">Profile</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>

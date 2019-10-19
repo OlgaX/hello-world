@@ -1,0 +1,44 @@
+<ng-container *ngIf="data">
+
+  <div class="row">
+
+    <div class="col-md-auto text-center mb-3 mb-md-0">
+
+      <a [routerLink]="['shows', data.id]">
+        <img [src]="data.img"
+             alt=""
+             class="img-fluid"></a>
+
+    </div>
+
+    <div class="col">
+      <div class="d-flex flex-column h-100">
+
+        <h3><a [routerLink]="['shows', data.id]">{{data?.title}}</a></h3>
+
+        <div [innerHTML]="data.description?.length > 300 ?
+                       (data.description | slice:0:300) + '...' :
+                        data.description"></div>
+
+        <div class="mt-auto d-flex align-items-center flex-wrap">
+
+          <div class="d-flex align-items-center mr-3 mt-3" *ngIf="data.rating">
+            <i class="material-icons mr-1 text-warning">star</i>{{data.rating}}
+          </div>
+
+          <div class="text-info mr-3 mt-3" *ngIf="data.genres">
+            <ng-container *ngFor="let genre of data.genres, last as lastItem">
+              {{genre}}{{!lastItem ? ',' : ''}}</ng-container>
+          </div>
+
+          <a [routerLink]="['shows', data.id]"
+             class="btn btn-primary ml-auto mt-3">Show More</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ng-container>

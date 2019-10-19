@@ -1,6 +1,12 @@
-# HelloWorld
+[![Build Status](https://travis-ci.com/OlgaX/tvland.svg?branch=master)](https://travis-ci.com/OlgaX/tvland)
+
+# TVLand
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
+
+## Production
+
+https://app-olgax.herokuapp.com/
 
 ## Development server
 

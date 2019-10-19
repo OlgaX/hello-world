@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+import {AuthService} from "./services/auth.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  public showSearchBar: boolean;
-  title = 'hello-world (test deploy with tag 0.0.0)';
+export class AppComponent implements OnInit {
+
+  constructor(private _auth: AuthService) {}
+
+  public ngOnInit(): void {
+    this._auth.localAuthSetup();
+  }
+
 }
