@@ -1,20 +1,17 @@
 <!--NEWEST SHOW-->
-<section class="mb-4 bg-light p-4">
-  <h2>Newest</h2>
-  <app-show-banner [data]="newestShow"></app-show-banner>
-</section>
+<h2 class="h4 m-0 px-4 py-2 bg-info text-white">Newest</h2>
+<app-show-banner [data]="newestShow"
+                 class="d-block mb-4 p-4 bg-light"></app-show-banner>
 
 <!--RECOMMENDED SHOW-->
-<section class="mb-4 bg-light p-4">
-  <h2>Recommended</h2>
-  <app-show-banner [data]="recommendedShow"></app-show-banner>
-</section>
-
+<h2 class="h4 m-0 px-4 py-2 bg-info text-white">Recommended</h2>
+<app-show-banner [data]="recommendedShow"
+                 class="d-block mb-4 p-4 bg-light"></app-show-banner>
 
 <!--WATCHED SHOWS-->
+<h2 class="h4 m-0 px-4 py-2 bg-info text-white">Watched</h2>
 <section *ngIf="watchedShows?.length"
          class="mb-4 bg-light p-4">
-  <h4>Watched</h4>
   <div class="row">
     <div class="col-sm-6 col-md-4 col-lg-3"
          *ngFor="let show of watchedShows">
@@ -24,8 +21,8 @@
 </section>
 
 <!--RANDOM SHOWS-->
+<h2 class="h4 m-0 px-4 py-2 bg-info text-white">See more</h2>
 <section class="mb-4 bg-light p-4">
-  <h4>See more</h4>
   <div class="row">
     <div class="col-sm-6 col-md-4 col-lg-3"
          *ngFor="let show of randomShows">

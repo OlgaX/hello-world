@@ -1,23 +1,24 @@
 <ng-container *ngIf="data">
-  <h2>{{data?.title}}</h2>
+  <h1 class="h4 m-0 px-4 py-2 bg-info text-white">{{data?.title}}</h1>
 
   <!-- SHOW INFO -->
-  <div class="row mb-4">
+  <section class="mb-4 p-4 bg-light">
+    <div class="row">
 
-      <div class="col-sm-4 text-center text-sm-left mb-3">
+      <div class="col-md-auto text-center mb-3 mb-md-0">
         <img [src]="data.img"
              alt=""
              class="img-fluid">
       </div>
 
-      <div class="col-sm-8">
+      <div class="col">
 
         <div class="d-flex flex-column h-100">
 
           <p *ngIf="data.genres">
             <b>Genres: </b>
             <span class="text-info" *ngFor="let genre of data.genres, last as lastItem">
-        {{genre}}{{!lastItem ? ',' : ''}}</span>
+      {{genre}}{{!lastItem ? ',' : ''}}</span>
           </p>
 
           <p [innerHTML]="data.description"></p>
@@ -41,6 +42,7 @@
       </div>
 
     </div>
+  </section>
 
   <!-- SEASONS -->
   <div class="p-2 font-weight-bold bg-light border-bottom">
