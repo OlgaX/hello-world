@@ -9,7 +9,6 @@ import {IUserProfile} from "../../models";
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
-
   public profile: IUserProfile;
 
   constructor(private _auth: AuthService) { }
@@ -22,5 +21,4 @@ export class UserProfileComponent implements OnInit {
   private _getUserProfile(): void {
     this._auth.userProfile$.subscribe((data:IUserProfile) => this.profile = data);
   }
-
 }

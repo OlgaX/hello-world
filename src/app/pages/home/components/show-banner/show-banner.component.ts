@@ -8,7 +8,5 @@ import {ShowDetails} from "../../../../models";
   styleUrls: ['./show-banner.component.scss']
 })
 export class ShowBannerComponent {
-
   @Input('data') public data: ShowDetails;
-
 }

@@ -9,7 +9,6 @@ import {IScheduleRequest, IScheduleResponse, IScheduleFullResponse} from "../../
   providedIn: 'root'
 })
 export class ScheduleService {
-
   private _schedule$: Observable<IScheduleResponse[]>;
   private _fullSchedule$: Observable<IScheduleFullResponse[]>;
 
@@ -50,5 +49,4 @@ export class ScheduleService {
 
     return this._fullSchedule$;
   }
-
 }

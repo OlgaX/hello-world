@@ -10,7 +10,6 @@ import {EpisodeDetailsService} from "./services/episode-details.service";
   styleUrls: ['./episode-details.component.scss']
 })
 export class EpisodeDetailsComponent {
-
   public data: ShowEpisode;
   public isEpisodeVisible: boolean;
 
@@ -33,5 +32,4 @@ export class EpisodeDetailsComponent {
       }
     });
   }
-
 }

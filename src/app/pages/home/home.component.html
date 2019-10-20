@@ -16,7 +16,8 @@
          class="mb-4 bg-light p-4">
   <h4>Watched</h4>
   <div class="row">
-    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let show of watchedShows">
+    <div class="col-sm-6 col-md-4 col-lg-3"
+         *ngFor="let show of watchedShows">
       <app-show-preview-item [data]="show"></app-show-preview-item>
     </div>
   </div>
@@ -26,7 +27,8 @@
 <section class="mb-4 bg-light p-4">
   <h4>See more</h4>
   <div class="row">
-    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let show of randomShows">
+    <div class="col-sm-6 col-md-4 col-lg-3"
+         *ngFor="let show of randomShows">
       <app-show-preview-item [data]="show"></app-show-preview-item>
     </div>
   </div>

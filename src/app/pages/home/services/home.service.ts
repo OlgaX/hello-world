@@ -9,16 +9,13 @@ import {StorageService} from "../../../services/storage.service";
 
 @Injectable()
 export class HomeService {
-
   private _recommendedShow$: Observable<ShowDetails>;
-
   private _newestShowId: number;
   private _recommendedShowId: number;
 
   constructor(private _scheduleService: ScheduleService,
               private _showsService: ShowService,
-              private _storageService: StorageService) {
-  }
+              private _storageService: StorageService) { }
 
   public getShowFromSchedule(queryParams?: IScheduleRequest): Observable<ShowDetails> {
     return this._scheduleService.getSchedule(queryParams).pipe(

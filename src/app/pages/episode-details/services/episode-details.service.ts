@@ -7,7 +7,6 @@ import {ShowEpisode} from "../../../models";
 
 @Injectable()
 export class EpisodeDetailsService {
-
   private _selectedEpisode: Subject<ShowEpisode> = new Subject<ShowEpisode>();
 
   constructor(private _episodeService: EpisodeService) { }
@@ -24,6 +23,5 @@ export class EpisodeDetailsService {
     return this._episodeService.getEpisodeById(id).pipe(
       map((response) => new ShowEpisode(response)),
     );
-
   }
 }

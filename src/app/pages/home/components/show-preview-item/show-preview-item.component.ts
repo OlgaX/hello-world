@@ -8,7 +8,5 @@ import {ShowDetails} from "../../../../models";
   styleUrls: ['./show-preview-item.component.scss']
 })
 export class ShowPreviewItemComponent {
-
   @Input('data') public data: ShowDetails;
-
 }

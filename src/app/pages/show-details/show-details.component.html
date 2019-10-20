@@ -48,7 +48,7 @@
   </div>
 
   <div class="my-2 nav nav-pills">
-    <a *ngFor="let season of episodesBySeasons | keyvalue; last as lastSeason"
+    <a *ngFor="let season of episodesBySeasons | keyvalue:disableSorting; last as lastSeason"
        [href]="'#season' + season.key"
        data-toggle="tab"
        class="nav-item nav-link"
@@ -57,7 +57,7 @@
 
   <!-- EPISODES -->
   <div class="tab-content">
-    <div *ngFor="let season of episodesBySeasons | keyvalue; last as lastSeason"
+    <div *ngFor="let season of episodesBySeasons | keyvalue:disableSorting; last as lastSeason"
          [id]="'season' + season.key"
          class="tab-pane fade show"
          [ngClass]="{active: lastSeason}">
@@ -76,8 +76,10 @@
           <tbody>
             <tr *ngFor="let episode of season.value">
               <td>{{episode.episodeNumber}}</td>
-              <td><a [routerLink]="['episode', episode.id]" (click)="onSelectEpisode(episode);">{{episode.title}}</a></td>
-              <td class="text-nowrap" [ngClass]="{'text-muted': episode.isNew}">{{episode.airdate}}</td>
+              <td><a [routerLink]="['episode', episode.id]"
+                   (click)="onSelectEpisode(episode);">{{episode.title}}</a></td>
+              <td class="text-nowrap"
+                  [ngClass]="{'text-muted': episode.isNew}">{{episode.airdate}}</td>
             </tr>
           </tbody>
 

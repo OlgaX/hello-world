@@ -12,7 +12,6 @@ const MAX_NUMBER_OF_SHOWS = 12;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   public newestShow: ShowDetails;
   public recommendedShow: ShowDetails;
   public watchedShows: ShowDetails[];
@@ -45,5 +44,4 @@ export class HomeComponent implements OnInit {
     this._homeService.getRandomShowsFromSchedule(MAX_NUMBER_OF_SHOWS)
       .subscribe((shows) => this.randomShows = shows);
   }
-
 }

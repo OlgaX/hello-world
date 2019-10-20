@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router"
 
 import {ShowDetails, ShowEpisode} from "../../models";
+import {DISABLE_SORTING} from "../../constants";
 import {ShowDetailsService} from "./services/show-details.service";
 
 @Component({
@@ -12,6 +13,7 @@ import {ShowDetailsService} from "./services/show-details.service";
 export class ShowDetailsComponent implements OnInit {
   public data: ShowDetails;
   public episodesBySeasons: {[season: number]: ShowEpisode[]};
+  public disableSorting = DISABLE_SORTING;
 
   private _showId: number;
   private _selectedEpisode: ShowEpisode;
